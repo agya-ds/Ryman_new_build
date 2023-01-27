@@ -40,12 +40,12 @@ const Contact = (props: any) => {
 
           : ''}
    
-       <div className="icon-row content-col availability-col">
+       {/* <div className="icon-row content-col availability-col">
       <Availability c_openForShoppingAvailibility={c_openForShoppingAvailibility} 
       c_clickCollectAvaliability={c_clickCollectAvaliability} 
       c_parking_facilities={c_parking_facilities} c_fitting_rooms={c_fitting_rooms}
       hours={hours}/>
-      </div>
+      </div> */}
 
       <ul className="">
         <li className="button-bx direction-button">
