@@ -1,7 +1,7 @@
-export const stagingBaseurl = "https://main-clemently--defiant--peacock-pgsdemo-com.preview.pagescdn.com/";
+export const stagingBaseurl = "";
 export const cookieText =
-  "By browsing Matalan, you agree to ";
-export const cookiesUrl = "https://www.matalan.co.uk/corporate/cookies";
+  "This website uses cookies to ensure you get the best experience on our website. ";
+export const cookiesUrl = "https://www.rymanbusiness.com/privacy-policy";
 export const baseuRL = "https://liveapi-sandbox.yext.com/v2/accounts/me/entities/geosearch?radius=500"
 export const apikey_for_entity = "c5cfb7d1e5c2fb822e1339a2610bec50";
 export const experienceKey = "ryman-new-build";
@@ -11,7 +11,7 @@ export const googleApikey = "AIzaSyDZNQlSlEIkFAct5VzUtsP4dSbvOr2bE18";
 export const regionNames = new Intl.DisplayNames(['en'], { type: 'region' })
 export const AnalyticsEnableDebugging  = true;
 export const AnalyticsEnableTrackingCookie  = true;
-export const favicon="https://www.matalan.co.uk/assets/favicon-f338a10eae042f47c9a3ee119cde59c2ded0a0a45db4da3c09f7937309ebf169.ico";
+export const favicon="";
 export const conversionDetailsDirection = {
   cid: "",
   cv: "1",

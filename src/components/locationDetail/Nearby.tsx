@@ -94,12 +94,12 @@ export default function Nearby(props: any) {
                       </div> : ''}
 
                    
-                      <div className="icon-row content-col availability-col">
+                      {/* <div className="icon-row content-col availability-col">
                         <Availability c_openForShoppingAvailibility={location.data.c_open_for_shopping} 
                         c_clickCollectAvaliability={location.data.c_click_collect_availability} 
                         c_parking_facilities={location.data.c_parking_facilities} c_fitting_rooms={location.data.c_fitting_rooms}
                         hours={location.data.hours} />
-                      </div> 
+                      </div>  */}
                     <div className="button-bx">
                       <a className="btn" href={url}>
                         {/* <div dangerouslySetInnerHTML={{__html: View_Store}}/> */}
