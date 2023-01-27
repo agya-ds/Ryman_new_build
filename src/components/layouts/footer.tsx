@@ -58,14 +58,14 @@ const Footer = (props: any) => {
 								</>
 							)
 						})}
-
+{/* 
 
 						<div className="store-inner">
 							<img src={footer.c_fAQs.icon.url} />
 
 							<Link props={footer.c_fAQs.cTA} />
 
-						</div>
+						</div> */}
 
 
 
