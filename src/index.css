@@ -841,3 +841,53 @@ before:bg-shapet before:absolute before:-z-[1] before:-right-0.5 before:-top-0.5
   }
   
 }
+
+/* service section */
+
+.food-list{
+  @apply pt-5 pb-0 lg:pt-14 lg:pb-10;
+}
+.food-list.center-4 .splide__arrows{
+  @apply xl:hidden
+} 
+.food-list.center-4 .splide__list{
+  @apply xl:justify-center
+}
+
+.food-list .splide li{
+  @apply px-0 sm:px-[15px];
+}
+.food-list .splide .slide-img{
+  @apply inline-block w-full h-0 pt-[100%] overflow-hidden relative rounded-2xl my-5 shadow-[0px_0px_16px_rgba(1,1,1,0.18)] transition-all duration-200 ease-in-out;
+}
+.food-list .splide li:not(.is-active) .slide-img{
+  @apply transform scale-90 sm:scale-100 opacity-50 sm:opacity-100 bg-white;
+}
+.food-list .splide .slide-img img{
+  @apply w-full h-full object-contain object-center absolute top-0 left-0 transition-all duration-300 scale-100 hover:scale-105 px-5 pb-10;
+}
+.food-list .splide h4{
+  @apply absolute bottom-0 left-0 w-full bg-[#eb0000] text-white text-center font-semibold text-sm sm:text-base uppercase py-3 transition-all duration-300;
+}
+
+ .splide .splide__arrows .splide__arrow{
+  @apply w-10 h-10 transition-all bg-[#eb0000] disabled:bg-[#FBE8E6]   hover:opacity-100 opacity-100 disabled:opacity-70 disabled:hover:bg-[#FBE8E6]; 
+}
+.splide .splide__arrows .splide__arrow.splide__arrow--next{
+  @apply right-8 sm:right-1 md:-right-0.5 2xl:-right-1;
+}
+.splide .splide__arrows .splide__arrow.splide__arrow--prev{
+  @apply left-8 sm:left-1 md:-left-0.5 2xl:-left-1;
+}
+.splide .splide__arrows .splide__arrow svg{
+  @apply fill-white lg:fill-[#FBE8E6];
+}
+.splide .splide__arrows .splide__arrow:disabled:hover svg{
+  @apply lg:fill-[#FBE8E6];
+}
+.splide .splide__arrows .splide__arrow:disabled svg{
+  @apply fill-[#FBE8E6]
+}
+.splide .splide__arrows .splide__arrow:hover svg{
+  @apply lg:fill-white;
+} 

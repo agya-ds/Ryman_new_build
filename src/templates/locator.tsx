@@ -18,6 +18,7 @@ import {experienceKey,apiKey,verticalKey, stagingBaseurl, AnswerExperienceConfig
 // import Newsletter from "../components/locatorPage/Newsletter";
 import { JsonLd } from "react-schemaorg";
 import { StaticData } from "../../sites-global/staticData";
+import Productcategory from "../components/commons/Service";
 
 export const config: TemplateConfig = {
   stream: {
@@ -34,6 +35,8 @@ export const config: TemplateConfig = {
       "c_locator_description",
       "c_matalan_header_logo",
       "c_header_links",
+      "c_courservice",
+      "c_heading",
       "c_footerDescription",
       "c_customer_services",
       "c_about_matalan",
@@ -172,7 +175,9 @@ const Locator: Template<TemplateRenderProps>= ({
    document,
  }) => {
    const {    
-   _site
+   _site,
+   c_courservice,
+   c_heading
    } = document;
  
  
@@ -227,10 +232,15 @@ const Locator: Template<TemplateRenderProps>= ({
         >
           
           <SearchLayout _site={_site}/>
-     
+         
         </SearchHeadlessProvider>
+        {c_heading? 
+        <div className="w-full text-center">
+        <h2 className="sec_heading font-bold">{c_heading}</h2>
+        <Productcategory prop={c_courservice}></Productcategory>
+        </div>
+        :<></>}
         {/* <Newsletter/> */}
-   
       </PageLayout>
     </>
   );
