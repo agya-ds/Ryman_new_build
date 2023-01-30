@@ -52,7 +52,9 @@ const Footer = (props: any) => {
 								<>
 									<div className="store-inner">
 										<img src={storfinder.icon.url} />
-										<Link props={storfinder.cTA}/>
+										<div className="uppercase text-center   
+   px-2 transition-all duration-300   hover:bg-red text-gray-dark
+    hover:text-white   border-black border hover:border-transparent  bg-white text-sm md:text-base font-medium"><Link props={storfinder.cTA}/></div>
 
 									</div>
 								</>
