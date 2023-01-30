@@ -209,12 +209,12 @@ body.mapView .mobile-btns .btn.mapBtn{
 }
 
   /* left listing */
-.search-bx{@apply  mb-2  z-20 bg-Dark-red  p-2 text-gray-dark float-left w-full md:w-[30rem] lg:w-[40%] }
+.search-bx{@apply  mb-2  z-20 bg-gray-dark  p-2 text-white float-left w-full md:w-[30rem] lg:w-[40%] }
 .search-bx button{ @apply float-right mr-0 relative text-white text-xs sm:text-sm }
 .search-bx button.useMyLocation {@apply flex items-center}
 .search-bx button.useMyLocation .icon{@apply mr-1.5}
 .search-field{@apply flex relative  }
-.search-bx .search-btn{@apply absolute top-0 rounded-none right-0  text-white p-2 w-12 h-12 text-center bg-seachbutton-bg}  
+.search-bx .search-btn{@apply absolute top-0 rounded-none right-0  text-white p-2 w-12 h-12 text-center bg-red}  
 .search-bx .search-btn svg{ @apply mx-auto}
 .search-field input{@apply  w-full bg-white h-12 text-search-text  py-2 pr-20 sm:py-4 sm:pr-40 pl-4 leading-7  text-[13px]   border-none rounded-none }
 .location p{ @apply mr-2 absolute rounded-lg -left-4 top-[0px] sm:top-[2px] xl:top-1}
@@ -233,7 +233,7 @@ body.mapView .mobile-btns .btn.mapBtn{
 .result-inner{@apply p-4 }
 .button-bx{@apply flex flex-col sm:flex-row mt-2.5 justify-around  ml-6}
 .button-bx .btn{@apply py-1.5 md:py-2 uppercase text-center cursor-pointer leading-4 sm:leading-[1.375rem] w-full sm:w-[48%]  
-   px-2 transition-all duration-300 hover:bg-red text-gray-dark
+   px-2 transition-all duration-300   hover:bg-red text-gray-dark
     hover:text-white   border-black border hover:border-transparent  bg-white text-sm md:text-base font-medium flex items-center justify-center  }
 .button-bx .btn + .btn{
   @apply mt-2 sm:mt-0
@@ -891,3 +891,36 @@ before:bg-shapet before:absolute before:-z-[1] before:-right-0.5 before:-top-0.5
 .splide .splide__arrows .splide__arrow:hover svg{
   @apply lg:fill-white;
 } 
+
+/* offer section */
+
+.brand-sec {
+  @apply w-full text-center py-12;
+}
+.brand-sec h2 {
+  @apply font-bold text-[1.625rem];
+}
+.brand-usp-inner {
+  @apply mt-8 md:justify-between justify-center  flex-wrap flex items-center;
+}
+.brand-bx {
+  @apply w-1/2  lg:w-full md:w-1/2 lg:w-auto justify-center lg:justify-start mb-4 lg:mb-0  flex  items-center pr-2 lg:first:pl-0 lg:last:pr-0 mb-5 md:mb-3; 
+}
+.brand-bx img {
+  @apply w-10 md:w-14 h-auto;
+}
+.brand-inner-content {
+  @apply text-left ml-2 md:ml-6 md:mr-3;
+}
+.brand-inner-content h3 {
+  @apply text-[0.75rem] md:text-[0.9375rem] font-semibold;
+}
+.brand-inner-content p {
+  @apply text-xs ;
+}
+.brand-sec-inner {
+  @apply m-0;
+}
+.brand-sec-inner .product-list .splide .slide-img {
+  @apply w-full flex flex-col h-full pt-2.5  overflow-hidden relative  my-0 transition-all duration-200 ease-in-out justify-center;
+}

@@ -114,13 +114,14 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
               </div></> : ''}
 
             <div className="button-bx">
-              <a type="button" href={url} className=" btn notHighlight ">
-                {/* <div dangerouslySetInnerHTML={{__html: View_Store}}/> */}
-                {StaticData.StoreDetailbtn}
-              </a>
-              {result.rawData.displayCoordinate ?
+            {result.rawData.displayCoordinate ?
                 <GetDirection buttonText={StaticData.getDirection} address={address} latitude={result.rawData.displayCoordinate?.latitude} longitude={result.rawData.displayCoordinate?.longitude} />
                 : <GetDirection buttonText={StaticData.getDirection} address={address} latitude={result.rawData.yextDisplayCoordinate?.latitude} longitude={result.rawData.yextDisplayCoordinate?.longitude} />}
+              <a type="button bg-red text-white" href={url} className=" btn notHighlight ">
+                {/* <div dangerouslySetInnerHTML={{__html: View_Store}}/> */}
+                STORE DETAIL
+              </a>
+            
             </div>
           </div>
 

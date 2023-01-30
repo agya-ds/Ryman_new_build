@@ -19,6 +19,7 @@ import {experienceKey,apiKey,verticalKey, stagingBaseurl, AnswerExperienceConfig
 import { JsonLd } from "react-schemaorg";
 import { StaticData } from "../../sites-global/staticData";
 import Productcategory from "../components/commons/Service";
+import Offersection from "../components/commons/Offersection";
 
 export const config: TemplateConfig = {
   stream: {
@@ -30,9 +31,9 @@ export const config: TemplateConfig = {
       "c_canonical" ,
       "c_meta_title",
       "c_meta_description",
-      "c_locatorBannerImage",
-      "c_locatorTitleH1",
-      "c_locator_description",
+      // "c_locatorBannerImage",
+      // "c_locatorTitleH1",
+      // "c_locator_description",
       "c_matalan_header_logo",
       "c_header_links",
       "c_courservice",
@@ -48,7 +49,8 @@ export const config: TemplateConfig = {
       "c_fAQs",
       "c_store_finder",
       "richTextDescription",
-      "c_top_header_links"
+      "c_top_header_links",
+      "c_offersection"
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -177,7 +179,8 @@ const Locator: Template<TemplateRenderProps>= ({
    const {    
    _site,
    c_courservice,
-   c_heading
+   c_heading,
+   c_offersection
    } = document;
  
  
@@ -220,7 +223,13 @@ const Locator: Template<TemplateRenderProps>= ({
         
         }}
       />
+         {/* {c_offersection?
+       <Offersection c_offersection={c_offersection}/>
+       :<></>} */}
       <PageLayout global={_site}>
+          {c_offersection?
+       <Offersection c_offersection={c_offersection}/>
+       :<></>} 
         <SearchHeadlessProvider
           experienceKey={experienceKey}
           locale={AnswerExperienceConfig.locale}
@@ -234,12 +243,18 @@ const Locator: Template<TemplateRenderProps>= ({
           <SearchLayout _site={_site}/>
          
         </SearchHeadlessProvider>
+   
+
+
+
+
         {c_heading? 
         <div className="w-full text-center">
         <h2 className="sec_heading font-bold">{c_heading}</h2>
         <Productcategory prop={c_courservice}></Productcategory>
         </div>
         :<></>}
+  
         {/* <Newsletter/> */}
       </PageLayout>
     </>

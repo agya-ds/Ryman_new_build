@@ -2,6 +2,7 @@ import * as React from "react";
 import Footer from "./footer";
 import Nav from "./Nav";
 
+
 type Props = {
     title?: string;
     _site?: any;

@@ -280,16 +280,18 @@ const SearchLayout = (props: any): JSX.Element => {
 
         </div>
       </div>
+      
       {props._site?
       <Banner name={props._site.c_locatorTitleH1} c_locatorBannerAdditionalText={props._site.c_locator_description} c_bannerImage={bannerimage} />
 :''}
+
       <div className="locator-main">
         {allowlocation.length > 0 ?
           <div className="for-allow">{allowlocation}</div>
           : ''}
         <div className="search-bx">
           <div className="location-with-filter">
-            <h3 className="m-2 font-semibold text-slate-900">{StaticData.FindLocationtext}</h3>
+            <h3 className="m-2 font-semibold text-slate-900">Store Finder</h3>
 
             <button className="useMyLocation" title="Search using your current location!" id="useLocation" onClick={onClick}>
               <div className="icon" dangerouslySetInnerHTML={{ __html: UseMylocationsvg }} />
