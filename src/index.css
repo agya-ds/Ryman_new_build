@@ -895,7 +895,7 @@ before:bg-shapet before:absolute before:-z-[1] before:-right-0.5 before:-top-0.5
 /* offer section */
 
 .brand-sec {
-  @apply w-full text-center py-12;
+  @apply w-full text-center ;
 }
 .brand-sec h2 {
   @apply font-bold text-[1.625rem];
