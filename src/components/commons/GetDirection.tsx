@@ -1,6 +1,7 @@
 import { Link } from "@yext/pages/components";
 import * as React from "react";
 import { conversionDetailsDirection, conversionDetailsPhone, Directionsvg } from "../../../sites-global/global";
+import { svgIcons } from "../../types/svgicon";
 
 type Cta = {
   buttonText: string;
@@ -73,7 +74,7 @@ const GetDirection = (props: GetDirection) => {
                       rel="noopener noreferrer"
                       conversionDetails={conversionDetails_direction}
                     >
-                        {buttonText}
+                       {svgIcons.locatorgetdirectionicon} Direction
                     </Link>
     {/* <a
      onClick={getDirectionUrl} className="btn notHighlight" rel="noopener noreferrer" >

@@ -14,7 +14,8 @@ import clickn from "../../images/clickn.svg"
 import { Matalan_marker, Openclose, View_Store } from "../../../sites-global/global";
 import { StaticData } from "../../../sites-global/staticData";
 import Availability from "../locationDetail/Availability";
-
+import { SvgIcon } from "@mui/material";
+import { svgIcons } from "../../types/svgicon";
 
 const metersToMiles = (meters: number) => {
   const miles = meters * 0.000621371;
@@ -119,7 +120,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
                 : <GetDirection buttonText={StaticData.getDirection} address={address} latitude={result.rawData.yextDisplayCoordinate?.latitude} longitude={result.rawData.yextDisplayCoordinate?.longitude} />}
               <a type="button bg-red text-white" href={url} className=" btn notHighlight ">
                 {/* <div dangerouslySetInnerHTML={{__html: View_Store}}/> */}
-                STORE DETAIL
+                {svgIcons.storeview}STORE DETAIL
               </a>
             
             </div>
