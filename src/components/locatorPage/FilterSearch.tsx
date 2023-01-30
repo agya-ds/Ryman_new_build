@@ -183,7 +183,7 @@ const FilterSearch = React.forwardRef<FilterHandle, FilterSearchProps>(
         <InputDropdown
           inputValue={input}
           params={params}
-          placeholder="Find Address, City or Postal Code"
+          placeholder="Enter a town  or Postal Code"
           screenReaderInstructions={SCREENREADER_INSTRUCTIONS}
           screenReaderText={screenReaderText}
           onlyAllowDropdownOptionSubmissions={true}
