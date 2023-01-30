@@ -281,9 +281,9 @@ const SearchLayout = (props: any): JSX.Element => {
         </div>
       </div>
       
-      {props._site?
+      {/* {props._site?
       <Banner name={props._site.c_locatorTitleH1} c_locatorBannerAdditionalText={props._site.c_locator_description} c_bannerImage={bannerimage} />
-:''}
+:''} */}
 
       <div className="locator-main">
         {allowlocation.length > 0 ?

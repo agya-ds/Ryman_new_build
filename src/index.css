@@ -76,10 +76,10 @@ nav .active{ @apply bg-light-red}
 
 /* Header */
 .site-header{ 
-  @apply pt-0 lg:pt-6 relative
+  @apply pt-0 lg:pt-6 relative bg-gray-light
 }
 .site-header .header-top{
-  @apply border-b border-border-light border-opacity-[0.45] text-nav-link
+  @apply border-b border-border-light border-opacity-[0.45] text-nav-link 
 }
 .site-header .header-top .logo svg{
   @apply w-36 h-auto lg:w-[14.625rem]
@@ -88,7 +88,7 @@ nav .active{ @apply bg-light-red}
   @apply w-36 h-auto lg:w-[14.625rem] mx-auto lg:ml-0
 }
 .site-header .container{
-  @apply flex flex-row justify-between
+  @apply flex flex-row justify-between 
 }
 .site-header .right-menu{ @apply hidden}
 .site-header .right-menu ul{
