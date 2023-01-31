@@ -73,12 +73,12 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
             </div>
             <div className="icon-row content-col address-with-availablity notHighlight">
               <Address address={address} />
-              {/* <div className="availablity-content">
+              <div className="availablity-content">
                 <Availability c_openForShoppingAvailibility={result.rawData.c_open_for_shopping} 
                 c_clickCollectAvaliability={result.rawData.c_click_collect_availability}
                 c_parking_facilities={result.rawData.c_parking_facilities} c_fitting_rooms={result.rawData.c_fitting_rooms}
                  hours={result.rawData.hours} />
-              </div> */}
+              </div>
             </div>
              {result.rawData.mainPhone?
             <div className="icon-row">

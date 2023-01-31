@@ -1,7 +1,7 @@
 import * as React from "react";
 import opennow from "../../images/open.svg";
-import Fiiting_rooms from "../../images/Fiiting-rooms.png";
-import Parking from "../../images/Parking.svg";
+import Fiiting_rooms from "../../images/open.svg";
+import Parking from "../../images/open.svg";
 import Availibilityclosed from "../../images/Availibilityclosed.svg";
 import Availibilityservices from "./Availibilityservices";
 export default function Availability(props: any) {
@@ -19,7 +19,7 @@ export default function Availability(props: any) {
                 var check = Date.parse(today);
                 var text = "";
                 if ((check <= to && check >= from)) {
-                    if (props.hours && !props.hours.reopenDate) {
+                    if (props.hours && !props.hours?.reopenDate) {
                         if (props.c_openForShoppingAvailibility.availability) {
                             return (
                                 <>
@@ -50,19 +50,19 @@ export default function Availability(props: any) {
                     )
                 }
             }
-            ) : props.hours && !props.hours.reopenDate ? <>
+            ) : props.hours && !props.hours?.reopenDate ? <>
               <Availibilityservices icon={opennow} text="Open for Shopping"  />
             </> : <>
             <Availibilityservices icon={opennow} text="Open for Shopping"  />
             </>
             }
-                  {typeof props.c_clickCollectAvaliability != "undefined" ? props.c_clickCollectAvaliability.date.map((res: any, index: Number) => {
+                  {typeof props.c_clickCollectAvaliability != "undefined" ? props.c_clickCollectAvaliability?.date?.map((res: any, index: Number) => {
                 var from = Date.parse(res.startDate);
                 var to = Date.parse(res.endDate);
                 var check = Date.parse(today);
                 var text = "";
                 if ((check <= to && check >= from)) {
-                    if (!props.hours.reopenDate) {
+                    if (!props.hours?.reopenDate) {
                         if (props.c_clickCollectAvaliability.availability) {
                             return (
                                 <>
@@ -93,13 +93,13 @@ export default function Availability(props: any) {
                     )
                 }
             }
-            ) : props.hours && !props.hours.reopenDate ? <>
+            ) : props.hours && !props.hours?.reopenDate ? <>
                <Availibilityservices icon={opennow} text="Click & Collect available"  />
             </> : <>
             <Availibilityservices icon={opennow} text="Click & Collect available"  />
             </>
             }
-               {typeof props.c_fitting_rooms != "undefined" ? props.c_fitting_rooms.date.map((res: any, index: Number) => {
+               {typeof props.c_fitting_rooms != "undefined" ? props.c_fitting_rooms?.date?.map((res: any, index: Number) => {
                 var from = Date.parse(res.startDate);
                 var to = Date.parse(res.endDate);
                 var check = Date.parse(today);
@@ -107,7 +107,7 @@ export default function Availability(props: any) {
                 console.log('dsfsd')
                 if ((check <= to && check >= from)) {
                     console.log('dsfsd')
-                    if (!props.hours.reopenDate) {
+                    if (!props.hours?.reopenDate) {
                         console.log('dsfsd')
                         if (props.c_fitting_rooms.availability) {
                             return (
@@ -146,7 +146,7 @@ export default function Availability(props: any) {
                     )
                 }
             }
-            ) : props.hours && !props.hours.reopenDate ? <>
+            ) : props.hours && !props.hours?.reopenDate ? <>
                 <Availibilityservices icon={Fiiting_rooms} text="Fitting Rooms"  />
             </> : <>
             <Availibilityservices icon={Fiiting_rooms} text="Fitting Rooms"  />
@@ -154,7 +154,7 @@ export default function Availability(props: any) {
             }
 
           
-               {typeof props.c_parking_facilities != "undefined" ? props.c_parking_facilities.date.map((res: any, index: Number) => {
+               {typeof props.c_parking_facilities != "undefined" ? props.c_parking_facilities?.date?.map((res: any, index: Number) => {
                 var from = Date.parse(res.startDate);
                 var to = Date.parse(res.endDate);
                 var check = Date.parse(today);
@@ -162,7 +162,7 @@ export default function Availability(props: any) {
                 console.log('dsfsd')
                 if ((check <= to && check >= from)) {
                     console.log('dsfsd')
-                    if (!props.hours.reopenDate) {
+                    if (!props.hours?.reopenDate) {
                         console.log('dsfsd')
                         if (props.c_parking_facilities.availability) {
                             return (
@@ -195,7 +195,7 @@ export default function Availability(props: any) {
                     )
                 }
             }
-            ) : props.hours && !props.hours.reopenDate ? <>
+            ) : props.hours && !props.hours?.reopenDate ? <>
             <Availibilityservices icon={Parking} text="Parking Facilities"  />
             </> : <>
             <Availibilityservices icon={Parking} text="Parking Facilities"  />
