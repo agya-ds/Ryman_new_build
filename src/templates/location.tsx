@@ -43,6 +43,7 @@ import {
   AnalyticsProvider,
   AnalyticsScopeProvider,
 } from "@yext/pages/components";
+import Offersection from "../components/commons/Offersection";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -91,6 +92,8 @@ export const config: TemplateConfig = {
       "c_parking_facilities",
       "c_fitting_rooms",
       "c_offerGallery",
+      "c_offersection",
+      "c_photoGallery",
       "geomodifier"
     ],
     // Defines the scope of entities that qualify for this stream.
@@ -319,6 +322,8 @@ const Location: Template<ExternalApiRenderData> = ({
     geomodifier,
     c_parking_facilities,
     c_fitting_rooms,
+    c_photoGallery,
+    c_offersection
   } = document;
 
  let templateData = { document: document, __meta: __meta };
@@ -447,7 +452,7 @@ breadcrumbScheme.push({
 
     <>
 
-      <JsonLd<Store>
+      <JsonLd<Storage>
         item={{
           "@context": "https://schema.org",
           "@type": "DepartmentStore",
@@ -510,11 +515,12 @@ breadcrumbScheme.push({
         {" "}
         <AnalyticsScopeProvider name={""}>
       <PageLayout global={_site}>
-
+   
         <BreadCrumbs
           name={geomodifier}
           parents={dm_directoryParents}
           baseUrl={relativePrefixToRoot} address={undefined}     ></BreadCrumbs>
+       
         <Banner name={`${geomodifier}`} hours={hours} timezone={timezone} clickcollect={c_click_collect} c_bannerImage={bannerimage} />
         <div className="location-information">
           <Contact address={address} c_openForShoppingAvailibility={c_open_for_shopping}          c_clickCollectAvaliability={c_click_collect_availability}
@@ -545,7 +551,7 @@ breadcrumbScheme.push({
           </div>
         </div>:''}
 
-
+      
 
 
 
@@ -561,7 +567,9 @@ breadcrumbScheme.push({
             <StoreHighlight c_storeHighlightInfo={c_store_highlights} name={name} />
           </div>
           : ''}
-
+{/* <div className="gallery-sec">
+               <PhotoSlider1 photos={c_photoGallery}/>
+               </div> */}
         <div className="faq-sec">
           {c_related_FAQs ? (
             <>
@@ -572,9 +580,9 @@ breadcrumbScheme.push({
           )}
         </div>
 
-        {/* <div className="gallery-sec">
-               <PhotoGallery photos={c_photos}/>
-               </div> */}
+        <div className="gallery-sec">
+               <PhotoGallery photos={c_photoGallery}/>
+               </div>
         <div className="nearby-sec">
           <div className="container">
             <div className="sec-title"><h2 className="">{StaticData.NearStoretext}</h2></div>

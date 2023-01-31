@@ -31,7 +31,7 @@ export default function StoreHighlight(props: any) {
         <div className="container mx-auto">
           
             <div className="sec-title">
-                <h2> {StaticData.Brandname} {props.name} {StaticData.Storehighlight}</h2>
+                <h2>  {props.name} {StaticData.Storehighlight}</h2>
             </div>
             {isSmallScreen?
             <div className="services-inner">
@@ -119,8 +119,8 @@ export default function StoreHighlight(props: any) {
                                 {res.description}
                             </div>
                             {res.findOutMore.link&&res.findOutMore.label?
-                            <div className="button-bx !ml-0 mt-4">
-                                <a className="btn" href={res.findOutMore.link}>
+                            <div className="button-bx  !ml-0 mt-4">
+                                <a className="btn " href={res.findOutMore.link}>
                                     {res.findOutMore.label}</a>
                             </div>
                             :''}

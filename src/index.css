@@ -924,3 +924,24 @@ before:bg-shapet before:absolute before:-z-[1] before:-right-0.5 before:-top-0.5
 .brand-sec-inner .product-list .splide .slide-img {
   @apply w-full flex flex-col h-full pt-2.5  overflow-hidden relative  my-0 transition-all duration-200 ease-in-out justify-center;
 }
+/* Photogallery */
+
+.Photogallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  background:#f1f1f1;
+  padding: 15px;
+}
+.Photogalleryimg {
+  width: 100%;
+  display: block;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  transition: all 100ms ease-out;
+}
+.Photogalleryimg:hover {
+  transform: scale(1.04);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}

@@ -1,5 +1,5 @@
 import * as React from "react";
-import gallerybg from "../../images/faq-bg.png"
+// import gallerybg from "../../images/faq-bg.png"
 
 import { useState, useEffect } from "react";
 import AccordionItem from "./AccordianItem";
@@ -57,7 +57,7 @@ export default function Faq(props: any) {
   return (
     <>
       <div className=" faq-main-sec">
-        <div className="gallery-bg"> <img className=" " src={gallerybg} width="38" height="35" alt="" /></div>
+        {/* <div className="gallery-bg"> <img className=" " src={gallerybg} width="38" height="35" alt="" /></div> */}
 
         <div className=" faq-card ">
           <div className="faq-sec-inner">
