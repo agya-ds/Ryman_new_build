@@ -476,7 +476,7 @@ const City: Template<TemplateRenderProps> = ({
           <div className="container mx-auto">
             <div className="sec-title">
               <h2>
-              {StaticData.AllStores} {name}
+               {name}
               </h2>
             </div>
             <div className="flex flex-wrap justify-center items-start -mx-2.5 lg:-mx-[.9375rem]">
