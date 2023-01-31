@@ -537,7 +537,7 @@ breadcrumbScheme.push({
               </div>
           }
         </div>
-        {c_offerGallery?
+        {/* {c_offerGallery?
         <div className="offerBanner">
           <div className="container">
             {c_offerGallery.map((offer:any)=>{
@@ -549,7 +549,7 @@ breadcrumbScheme.push({
             })}
            
           </div>
-        </div>:''}
+        </div>:''} */}
 
       
 

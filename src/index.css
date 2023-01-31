@@ -555,7 +555,7 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
 .gallery-bg{@apply absolute inset-0 -z-10 }
 .gallery-bg img{@apply  w-full h-full }
 .photos-row{@apply grid gap-3 md:grid-cols-2  lg:grid-cols-3}
-.image-frame{@apply !m-2 border p-3 border-dashed border-gray-dark w-full  }
+.image-frame{@apply !m-2 border p-3  border-gray-dark w-full  }
 .photos-row img{@apply w-full  rounded-none object-cover h-80  }
 
 /* services sec */
@@ -930,11 +930,11 @@ before:bg-shapet before:absolute before:-z-[1] before:-right-0.5 before:-top-0.5
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  background:#f1f1f1;
+  /* background:#f1f1f1; */
   padding: 15px;
 }
 .Photogalleryimg {
-  width: 100%;
+  /* width: 100%; */
   display: block;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);

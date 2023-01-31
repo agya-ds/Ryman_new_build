@@ -1,30 +1,36 @@
 import * as React from "react";
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
+import gallerybg from "../../images/bg-service.jpg"
 
-const PhotoSlider = (props: any) => {
-  // const { c_photoGallery, height, width } = props;  
-  const photos = props.photos && props.photos.map((element:any) => (     
-	<SplideSlide>
-    <img  className ="Photogalleryimg" height="" width="" src={element.url}  />
-	</SplideSlide>    
-  ));
- 
- 
-  
+const PhotoGallery = (props: any) => {
+
+   const photos = props.photos.map((element:any) => {
+    const {height,url, width}=element;
+    return (<div className="image-frame">
+      <img   height={height}   
+      src={url} // use normal <img> attributes as props
+        width={width}      
+        className="image  "
+       
+      >
+      </img>
+    </div>)
+});
+
+
   return (
     <>
-    {photos?
-    <>
-      <h2 className="heading text-center text-bold text-red">PHOTO GALLERY</h2>  
-      <div className="Photogallery">
-      {photos}
+    
+      <div className="space-y-5 container mx-auto">
+     {/* <div className="gallery-bg"> <img className=" " src={gallerybg} width="38" height="35" alt=""/></div>  */}
+        <div className="text-xl font-semibold text-center">
+         <h1 className="text-red-eb pt-8"> Photos</h1>
+          </div>
+        <div className="photos-row">
+            {photos}
+        </div>
       </div>
-      </>
-        :""}  
-      
     </>
   );
 };
 
-export default PhotoSlider;
+export default PhotoGallery;
