@@ -16,7 +16,8 @@ const PhotoSlider = (props: any) => {
     <>
     {photos?
     <>
-      <h2 className="heading text-center text-bold text-red">PHOTO GALLERY</h2>  
+     <h2 className="">PHOTO GALLERY{" "}</h2>
+      {/* <h2 className="heading text-center text-bold text-red">PHOTO GALLERY</h2>   */}
       <div className="Photogallery">
       {photos}
       </div>
