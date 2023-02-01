@@ -275,7 +275,7 @@ const country: Template<TemplateRenderProps> = ({
           <div className="container">
             <div className="sec-title">
               <h2 style={{ textAlign: "center" }}>
-                {StaticData.AllStores} {regionNames.of(name)}{" "}
+              Ryman Stores in {regionNames.of(name)}{" "}
               </h2>
             </div>
 

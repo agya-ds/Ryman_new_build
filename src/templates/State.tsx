@@ -297,7 +297,7 @@ const region: Template<TemplateRenderProps> = ({
           <div className="container">
           <div className="sec-title">
               <h2 style={{ textAlign: "center" }}>
-               {name}
+              Ryman Stores in  {name}
               </h2>
             </div>
             <ul className="region-list">
