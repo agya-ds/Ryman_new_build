@@ -493,7 +493,7 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
 
 .direction-button{@apply mt-6 }
 .direction-button a{@apply  !border-button-light hover:!border-transparent !border-2 }
-.direction-button .btn:hover svg{@apply !fill-red }
+/* .direction-button .btn:hover svg{@apply !fill-red } */
 
 
 .address-main-sec .button-bx{
