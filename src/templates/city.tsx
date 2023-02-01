@@ -446,13 +446,34 @@ const City: Template<TemplateRenderProps> = ({
   let bannerimage = c_banner_image && c_banner_image.image.url;
   return (
     <>
-      <JsonLd<Organization>
+         <JsonLd<Organization>
         item={{
           "@context": "https://schema.org",
-          "@type": "Store",
+          "@type": "Organization",
           name: "Ryman",
-          //   url: _site.c_canonical,
-          // logo: `${document.c_ogImage ? document.c_ogImage.map((result:any)=>{return result.url}) : ""}`
+          url: "https://www.rymanbusiness.com/",
+          logo: "https://eu.evocdn.io/dealer/1411/content/media/My_Theme/ry-foot-logo.png",
+          address: {
+            "@type": "PostalAddress",
+            // streetAddress: address.line1,
+            // addressLocality: address.city,
+            // addressRegion: address.region,
+            // postalCode: address.postalCode,
+            addressCountry: "United Kingdom",
+          },
+          contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "contact",
+            telephone: "0333 103 0933",
+            email: "https://www.rymanbusiness.com/contact-us"
+          },
+          sameAs: [
+            "https://www.facebook.com/rymanbusiness/",
+            "https://twitter.com/RymanBusiness",
+            "https://www.linkedin.com/company/rymanbusiness",
+            "https://www.instagram.com/rymanbusiness/"
+           
+          ],
         }}
       />
       <JsonLd<BreadcrumbList>
