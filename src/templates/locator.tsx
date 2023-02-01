@@ -200,9 +200,9 @@ const Locator: Template<TemplateRenderProps>= ({
         item={{
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "MATALAN",
+          name: "Ryman",
           url: stagingBaseurl,
-          logo: logo,
+          logo: "https://eu.evocdn.io/dealer/1411/content/media/My_Theme/favicon-32x32.png",
         }}
       />
        <JsonLd<BreadcrumbList>

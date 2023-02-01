@@ -1,4 +1,4 @@
-export const stagingBaseurl = "";
+export const stagingBaseurl = "https://development-securely--troubled--elk-sbx-pgsdemo-com.sbx.preview.pagescdn.com/";
 export const cookieText =
   "This website uses cookies to ensure you get the best experience on our website. ";
 export const cookiesUrl = "https://www.rymanbusiness.com/privacy-policy";
