@@ -77,131 +77,131 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return "/" + document.slug.toString() + ".html";
 };
 
-// export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
-//   return [`index-old/${document.id.toString()}`];
-// };
+export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
+  return [`index-old/${document.id.toString()}`];
+};
 
 
-// export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
-//   relativePrefixToRoot,
-//   path,
-//   document,
-// }): HeadConfig => {
-//   return {
-//     title: `${document.c_meta_title?document.c_meta_title:`Matalan Stores in ${document.name} | Find a Local Store`}`,
-//     charset: "UTF-8",
-//     viewport: "width=device-width, initial-scale=1",
-//     tags: [
-//       {
-//         type: "link",
-//         attributes: {
-//           rel: "shortcut icon",
-//           href: favicon,
-//         },
-//       },
-//         {
-//           type: "meta",
-//           attributes: {
-//             name: "description",
-//             content:`${document.c_meta_description?document.c_meta_description:`Use this page to find your nearest Matalan store in ${document.name} and discover the location details you need to visit us today.`}`,
-//           },
-//         },
+export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
+  relativePrefixToRoot,
+  path,
+  document,
+}): HeadConfig => {
+  return {
+    title: `${document.c_meta_title?document.c_meta_title:`Ryman Stores in ${document.name} | Find a Local Store`}`,
+    charset: "UTF-8",
+    viewport: "width=device-width, initial-scale=1",
+    tags: [
+      {
+        type: "link",
+        attributes: {
+          rel: "shortcut icon",
+          href: favicon,
+        },
+      },
+        {
+          type: "meta",
+          attributes: {
+            name: "description",
+            content:`${document.c_meta_description?document.c_meta_description:`Use this page to find your nearest Ryman store in ${document.name} and discover the location details you need to visit us today.`}`,
+          },
+        },
 
-//         {
-//           type: "meta",
-//           attributes: {
-//             name: "author",
-//             content: StaticData.Brandname,
-//           },
-//         },
-//         {
-//           type: "meta",
-//           attributes: {
-//             name: "keywords",
-//             content: document.name,
-//           },
-//         },
-//         {
-//           type: "meta",
-//           attributes: {
-//             name: "robots",
-//             content: "noindex, nofollow",
-//           },
-//         },
+        {
+          type: "meta",
+          attributes: {
+            name: "author",
+            content: StaticData.Brandname,
+          },
+        },
+        {
+          type: "meta",
+          attributes: {
+            name: "keywords",
+            content: document.name,
+          },
+        },
+        {
+          type: "meta",
+          attributes: {
+            name: "robots",
+            content: "noindex, nofollow",
+          },
+        },
 
-//         {
-//           type: "link",
-//           attributes: {
-//             rel: "canonical",
-//             href: `${
-//               stagingBaseurl 
-//                  ? stagingBaseurl + document.slug + ".html"
-//                  : "/" + document.slug + ".html"
-//             }`,
-//           },
-//         },
-//       //   // /og tags
+        {
+          type: "link",
+          attributes: {
+            rel: "canonical",
+            href: `${
+              stagingBaseurl 
+                 ? stagingBaseurl + document.slug + ".html"
+                 : "/" + document.slug + ".html"
+            }`,
+          },
+        },
+      //   // /og tags
 
-//         {
-//           type: "meta",
-//           attributes: {
-//             property: "og:url",
-//             content: `${
-//               stagingBaseurl 
-//                  ? stagingBaseurl + document.slug + ".html"
-//                  : "/" + document.slug + ".html"}`,
-//           },
-//         },
-//         {
-//           type: "meta",
-//           attributes: {
-//             property: "og:description",
-//             content: `${document.c_meta_description?document.c_meta_description:`Use this page to find your nearest Matalan store in ${document.name} and discover the location details you need to visit us today.`}`,
-//           },
-//         },
-//         {
-//           type: "meta",
-//           attributes: {
-//             property: "og:title",
-//             content: `${document.name}`,
-//           },
-//         },
-//         {
-//           type: "meta",
-//           attributes: {
-//             property: "og:image",
-//             content: favicon,
-//           },
-//         },
+        {
+          type: "meta",
+          attributes: {
+            property: "og:url",
+            content: `${
+              stagingBaseurl 
+                 ? stagingBaseurl + document.slug + ".html"
+                 : "/" + document.slug + ".html"}`,
+          },
+        },
+        {
+          type: "meta",
+          attributes: {
+            property: "og:description",
+            content: `${document.c_meta_description?document.c_meta_description:`Use this page to find your nearest Ryman store in ${document.name} and discover the location details you need to visit us today.`}`,
+          },
+        },
+        {
+          type: "meta",
+          attributes: {
+            property: "og:title",
+            content: `${document.name}`,
+          },
+        },
+        {
+          type: "meta",
+          attributes: {
+            property: "og:image",
+            content: favicon,
+          },
+        },
 
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "twitter:card",
-//           content: "summary",
-//         },
-//       },
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "twitter:url",
-//           content: `${
-//             stagingBaseurl 
-//                ? stagingBaseurl + document.slug + ".html"
-//                : "/" + document.slug + ".html"}`,
-//         },
-//       },
+      {
+        type: "meta",
+        attributes: {
+          name: "twitter:card",
+          content: "summary",
+        },
+      },
+      {
+        type: "meta",
+        attributes: {
+          name: "twitter:url",
+          content: `${
+            stagingBaseurl 
+               ? stagingBaseurl + document.slug + ".html"
+               : "/" + document.slug + ".html"}`,
+        },
+      },
 
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "twitter:description",
-//           content: `${document.c_meta_description?document.c_meta_description:`Use this page to find your nearest Matalan store in ${document.name} and discover the location details you need to visit us today.`}`
-//         },
-//       },
-//     ],
-//   };
-// };
+      {
+        type: "meta",
+        attributes: {
+          name: "twitter:description",
+          content: `${document.c_meta_description?document.c_meta_description:`Use this page to find your nearest Ryman store in ${document.name} and discover the location details you need to visit us today.`}`
+        },
+      },
+    ],
+  };
+};
 
 
 
@@ -266,7 +266,7 @@ const country: Template<TemplateRenderProps> = ({
           baseUrl={relativePrefixToRoot}
         ></BreadCrumbs>
         <div className="location-dtl">
-          <Banner name={c_bannerHeading?c_bannerHeading:regionNames.of(name)} c_bannerImage={bannerimage} />
+          <Banner name={c_bannerHeading ? c_bannerHeading : regionNames.of(name)} c_bannerImage={bannerimage} timezone={undefined} />
         </div>
 
 

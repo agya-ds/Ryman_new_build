@@ -85,137 +85,137 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return url;
 };
 
-// export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
-//   relativePrefixToRoot,
-//   path,
-//   document,
-// }): HeadConfig => {
+export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
+  relativePrefixToRoot,
+  path,
+  document,
+}): HeadConfig => {
 
 
-//   var canonical="";
-//   document.dm_directoryChildren.map((entity: any) => {
-//     canonical= entity.address.countryCode.toLowerCase().replaceAll(" ", "-") + '/' +  entity.address.region.toLowerCase().replaceAll(" ", "-")
-//     })
+  var canonical="";
+  document.dm_directoryChildren.map((entity: any) => {
+    canonical= entity.address.countryCode.toLowerCase().replaceAll(" ", "-") + '/' +  entity.address.region.toLowerCase().replaceAll(" ", "-")
+    })
 
-//   return {
-//     title:`${document.c_meta_title?document.c_meta_title:`Matalan Stores in ${document.name} | Find a Local Store`}`,
-//     charset: "UTF-8",
-//     viewport: "width=device-width, initial-scale=1",
-//       tags: [
-//         {
-//           type: "meta",
-//           attributes: {
-//             name: "description",
-//             content: `${document.c_meta_description?document.c_meta_description:`Use this page to find your nearest Matalan store in ${document.name} and discover the location details you need to visit us today.`}`,
-//           },
-//         },
-//         {
-//           type: "link",
-//           attributes: {
-//             rel: "shortcut icon",
-//             href: favicon,
-//           },
-//         },
-//         {
-//           type: "meta",
-//           attributes: {
-//             name: "author",
-//             content: "MATALAN",
-//           },
-//         },
+  return {
+    title:`${document.c_meta_title?document.c_meta_title:`Ryman Stores in ${document.name} | Find a Local Store`}`,
+    charset: "UTF-8",
+    viewport: "width=device-width, initial-scale=1",
+      tags: [
+        {
+          type: "meta",
+          attributes: {
+            name: "description",
+            content: `${document.c_meta_description?document.c_meta_description:`Use this page to find your nearest Ryman store in ${document.name} and discover the location details you need to visit us today.`}`,
+          },
+        },
+        {
+          type: "link",
+          attributes: {
+            rel: "shortcut icon",
+            href: favicon,
+          },
+        },
+        {
+          type: "meta",
+          attributes: {
+            name: "author",
+            content: "Ryman",
+          },
+        },
 
-//         {
-//           type: "meta",
-//           attributes: {
-//             name: "robots",
-//             content: "noindex, nofollow",
-//           },
-//         },
+        {
+          type: "meta",
+          attributes: {
+            name: "robots",
+            content: "noindex, nofollow",
+          },
+        },
 
-//         {
-//           type: "link",
-//           attributes: {
-//             rel: "canonical",
-//             href: `${
-//               document.c_canonical 
-//                  ? document.c_canonical + "/" +canonical + "/"+ document.slug + ".html"
-//                  : 
-//                       stagingBaseurl 
-//                          ? stagingBaseurl + canonical + "/"+ document.slug + ".html"
-//                          : "/" + document.slug + ".html"
-//             }`,
-//           },
-//         },
-//         // /og tags
+        {
+          type: "link",
+          attributes: {
+            rel: "canonical",
+            href: `${
+              document.c_canonical 
+                 ? document.c_canonical + "/" +canonical + "/"+ document.slug + ".html"
+                 : 
+                      stagingBaseurl 
+                         ? stagingBaseurl + canonical + "/"+ document.slug + ".html"
+                         : "/" + document.slug + ".html"
+            }`,
+          },
+        },
+        // /og tags
 
-//         {
-//           type: "meta",
-//           attributes: {
-//             property: "og:url",
-//             content: `${
-//               document.c_canonical 
-//                  ? document.c_canonical + "/" +canonical + "/"+ document.slug + ".html"
-//                  : 
-//                       stagingBaseurl 
-//                          ? stagingBaseurl + canonical + "/"+ document.slug + ".html"
-//                          : "/" + document.slug + ".html"
-//             }`,
-//           },
-//         },
-//         {
-//           type: "meta",
-//           attributes: {
-//             property: "og:description",
-//             content: `${document.c_meta_description?document.c_meta_description:`Use this page to find your nearest Matalan store in ${document.name} and discover the location details you need to visit us today.`}`,
-//           },
-//         },
-//         {
-//           type: "meta",
-//           attributes: {
-//             property: "og:title",
-//             content: `${document.name}`,
-//           },
-//         },
-//         {
-//           type: "meta",
-//           attributes: {
-//             property: "og:image",
-//             content: favicon,
-//           },
-//         },
+        {
+          type: "meta",
+          attributes: {
+            property: "og:url",
+            content: `${
+              document.c_canonical 
+                 ? document.c_canonical + "/" +canonical + "/"+ document.slug + ".html"
+                 : 
+                      stagingBaseurl 
+                         ? stagingBaseurl + canonical + "/"+ document.slug + ".html"
+                         : "/" + document.slug + ".html"
+            }`,
+          },
+        },
+        {
+          type: "meta",
+          attributes: {
+            property: "og:description",
+            content: `${document.c_meta_description?document.c_meta_description:`Use this page to find your nearest Ryman store in ${document.name} and discover the location details you need to visit us today.`}`,
+          },
+        },
+        {
+          type: "meta",
+          attributes: {
+            property: "og:title",
+            content: `${document.name}`,
+          },
+        },
+        {
+          type: "meta",
+          attributes: {
+            property: "og:image",
+            content: favicon,
+          },
+        },
 
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "twitter:card",
-//           content: "summary",
-//         },
-//       },
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "twitter:url",
-//           content: `${
-//             document.c_canonical 
-//                ? document.c_canonical + "/" +canonical + "/"+ document.slug + ".html"
-//                : 
-//                     stagingBaseurl 
-//                        ? stagingBaseurl + canonical + "/"+ document.slug + ".html"
-//                        : "/" + document.slug + ".html"
-//           }`,
-//         },
-//       },
+      {
+        type: "meta",
+        attributes: {
+          name: "twitter:card",
+          content: "summary",
+        },
+      },
+      {
+        type: "meta",
+        attributes: {
+          name: "twitter:url",
+          content: `${
+            document.c_canonical 
+               ? document.c_canonical + "/" +canonical + "/"+ document.slug + ".html"
+               : 
+                    stagingBaseurl 
+                       ? stagingBaseurl + canonical + "/"+ document.slug + ".html"
+                       : "/" + document.slug + ".html"
+          }`,
+        },
+      },
 
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "twitter:description",
-//           content:`${document.c_meta_description?document.c_meta_description:`Use this page to find your nearest Matalan store in ${document.name} and discover the location details you need to visit us today.`}`
-//         },
-//       },
-//     ],
-//   };
-// };
+      {
+        type: "meta",
+        attributes: {
+          name: "twitter:description",
+          content:`${document.c_meta_description?document.c_meta_description:`Use this page to find your nearest Ryman store in ${document.name} and discover the location details you need to visit us today.`}`
+        },
+      },
+    ],
+  };
+};
 
 const City: Template<TemplateRenderProps> = ({
   relativePrefixToRoot,
@@ -450,7 +450,7 @@ const City: Template<TemplateRenderProps> = ({
         item={{
           "@context": "https://schema.org",
           "@type": "Store",
-          name: "Matalan",
+          name: "Ryman",
           //   url: _site.c_canonical,
           // logo: `${document.c_ogImage ? document.c_ogImage.map((result:any)=>{return result.url}) : ""}`
         }}

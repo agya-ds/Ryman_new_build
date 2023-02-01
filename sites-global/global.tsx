@@ -11,7 +11,7 @@ export const googleApikey = "AIzaSyDZNQlSlEIkFAct5VzUtsP4dSbvOr2bE18";
 export const regionNames = new Intl.DisplayNames(['en'], { type: 'region' })
 export const AnalyticsEnableDebugging  = true;
 export const AnalyticsEnableTrackingCookie  = true;
-export const favicon="";
+export const favicon="https://eu.evocdn.io/dealer/1411/content/media/My_Theme/favicon-32x32.png";
 export const conversionDetailsDirection = {
   cid: "",
   cv: "1",

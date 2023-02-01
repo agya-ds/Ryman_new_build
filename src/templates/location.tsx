@@ -149,113 +149,113 @@ export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
  * will be used to generate the inner contents of the HTML document's <head> tag.
  * This can include the title, meta tags, script tags, etc.
  */
-// export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
-//   relativePrefixToRoot,
-//   path,
-//   document,
-// }): HeadConfig => {
-//   return {
-//     title: document.c_meta_title?document.c_meta_title:` Matalan ${document.geomodifier} Store - Online Clothes Store`,
-//     charset: "UTF-8",
-//     viewport: "width=device-width, initial-scale=1",
-//     tags: [
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "description",
-//           content: `${document.c_meta_description?document.c_meta_description:`Visit Matalan ${document.geomodifier} Store | Matalan is your local great value family retailer shop. Find latest seasonal looks for Women, Men and kids, plus a huge range of homeware.`}`,
-//         },
-//       },
+export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
+  relativePrefixToRoot,
+  path,
+  document,
+}): HeadConfig => {
+  return {
+    title: document.c_meta_title?document.c_meta_title:` Ryman ${document.geomodifier} Store -  | Office Supplies | Businesses, Offices, & Schools`,
+    charset: "UTF-8",
+    viewport: "width=device-width, initial-scale=1",
+    tags: [
+      {
+        type: "meta",
+        attributes: {
+          name: "description",
+          content: `${document.c_meta_description?document.c_meta_description:`Visit Ryman ${document.geomodifier}Buy office supplies in the UK for your business, office, school, or small business. Our range has everything from stationery to furniture at great prices with a service you can trust`}`,
+        },
+      },
 
      
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "author",
-//           content: "Matalan",
-//         },
-//       },
+      {
+        type: "meta",
+        attributes: {
+          name: "author",
+          content: "Ryman",
+        },
+      },
 
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "robots",
-//           content: "noindex, nofollow",
-//         },
-//       },
+      {
+        type: "meta",
+        attributes: {
+          name: "robots",
+          content: "noindex, nofollow",
+        },
+      },
 
-//       {
-//         type: "link",
-//         attributes: {
-//           rel: "canonical",
-//           href: `${document._site.c_canonical?document.c_canonical:stagingBaseurl
+      {
+        type: "link",
+        attributes: {
+          rel: "canonical",
+          href: `${document._site.c_canonical?document.c_canonical:stagingBaseurl
 
-//             }${document.slug?document.slug:`${document.id}-${document.geomodifier.toLowerCase()}`}.html`,
-//         },
-//       },
+            }${document.slug?document.slug:`${document.id}-${document.geomodifier.toLowerCase()}`}.html`,
+        },
+      },
 
-//       {
-//         type: "meta",
-//         attributes: {
-//           property: "og:description",
-//           content: `${document.c_meta_description?document.c_meta_description:`Visit Matalan ${document.geomodifier} Store | Matalan is your local great value family retailer shop. Find latest seasonal looks for Women, Men and kids, plus a huge range of homeware.`}`,
-//         },
-//       },
-//       {
-//         type: "link",
-//         attributes: {
-//           rel: "shortcut icon",
-//           href: favicon,
-//         },
-//       },
-//       {
-//         type: "meta",
-//         attributes: {
-//           property: "og:title",
-//           content: document.c_meta_title?document.c_meta_title:` Matalan ${document.geomodifier} Store - Online Clothes Store`,
-//         },
-//       },
-//       {
-//         type: "meta",
-//         attributes: {
-//           property: "og:image",
-//           content: favicon,
-//         },
-//       },
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "twitter:card",
-//           content: "summary",
-//         },
-//       },
-//       {
-//           type: "meta",
-//           attributes: {
-//             name: "twitter:url",
-//             content: `${document._site.c_canonical?document.c_canonical:stagingBaseurl
+      {
+        type: "meta",
+        attributes: {
+          property: "og:description",
+          content: `${document.c_meta_description?document.c_meta_description:`Visit Ryman ${document.geomodifier}Buy office supplies in the UK for your business, office, school, or small business. Our range has everything from stationery to furniture at great prices with a service you can trust`}`,
+        },
+      },
+      {
+        type: "link",
+        attributes: {
+          rel: "shortcut icon",
+          href: favicon,
+        },
+      },
+      {
+        type: "meta",
+        attributes: {
+          property: "og:title",
+          content: document.c_meta_title?document.c_meta_title:` Ryman ${document.geomodifier} Store -  | Office Supplies | Businesses, Offices, & Schools`,
+        },
+      },
+      {
+        type: "meta",
+        attributes: {
+          property: "og:image",
+          content: favicon,
+        },
+      },
+      {
+        type: "meta",
+        attributes: {
+          name: "twitter:card",
+          content: "summary",
+        },
+      },
+      {
+          type: "meta",
+          attributes: {
+            name: "twitter:url",
+            content: `${document._site.c_canonical?document.c_canonical:stagingBaseurl
 
-//             }${document.slug?document.slug:`${document.id}-${document.geomodifier.toLowerCase()}`}.html`,
-//           },
-//         },
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "twitter:description",
-//           content: `${document.c_meta_description?document.c_meta_description:`Visit Matalan ${document.geomodifier} Store | Matalan is your local great value family retailer shop. Find latest seasonal looks for Women, Men and kids, plus a huge range of homeware.`}`,
-//         },
-//       },
-//       /// twitter tag
-
-
+            }${document.slug?document.slug:`${document.id}-${document.geomodifier.toLowerCase()}`}.html`,
+          },
+        },
+      {
+        type: "meta",
+        attributes: {
+          name: "twitter:description",
+          content: `${document.c_meta_description?document.c_meta_description:`Visit Ryman ${document.geomodifier}Buy office supplies in the UK for your business, office, school, or small business. Our range has everything from stationery to furniture at great prices with a service you can trust`}`,
+        },
+      },
+      /// twitter tag
 
 
 
 
-//     ],
 
-//   };
-// };
+
+    ],
+
+  };
+};
 type ExternalApiData = TemplateProps & { externalApiData: nearByLocation };
 export const transformProps: TransformProps<ExternalApiData> = async (
   data: any
@@ -455,8 +455,8 @@ breadcrumbScheme.push({
       <JsonLd<Storage>
         item={{
           "@context": "https://schema.org",
-          "@type": "DepartmentStore",
-          name: "Matalan",
+          "@type": "Store",
+          name: "Ryman",
           address: {
             "@type": "PostalAddress",
             streetAddress: address.line1,
