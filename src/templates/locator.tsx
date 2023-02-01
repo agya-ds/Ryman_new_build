@@ -67,111 +67,111 @@ export const config: TemplateConfig = {
 export const getPath: GetPath<TemplateProps> = () => {
   return `/index.html`;
 };
-// export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
-//   relativePrefixToRoot,
-//   path,
-//   document,
-// }): HeadConfig => {
-//  return {
-//    title:`${document.c_meta_title?document.c_meta_title:StaticData.Meta_title}`,
-//    charset: "UTF-8",
-//    viewport: "width=device-width, initial-scale=1",
-//    tags: [
-//      {
-//        type: "meta",
-//        attributes: {
-//          name: "description",
-//          content: `${document.c_meta_description?document.c_meta_description:StaticData.Meta_description}`,
-//        },
-//      },
+export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
+  relativePrefixToRoot,
+  path,
+  document,
+}): HeadConfig => {
+ return {
+   title:`${document.c_meta_title?document.c_meta_title:StaticData.Meta_title}`,
+   charset: "UTF-8",
+   viewport: "width=device-width, initial-scale=1",
+   tags: [
+     {
+       type: "meta",
+       attributes: {
+         name: "description",
+         content: `${document.c_meta_description?document.c_meta_description:StaticData.Meta_description}`,
+       },
+     },
 
-//      {
-//        type: "meta",
-//        attributes: {
-//          name: "author",
-//          content: "Matalan",
-//        },
-//      },
+     {
+       type: "meta",
+       attributes: {
+         name: "author",
+         content: "Matalan",
+       },
+     },
 
-//      {
-//        type: "meta",
-//        attributes: {
-//          name: "robots",
-//          content: "noindex, nofollow",
-//        },
-//      },
-//      {
-//       type: "link",
-//       attributes: {
-//         rel: "shortcut icon",
-//         href: `https://www.matalan.co.uk/assets/favicon-f338a10eae042f47c9a3ee119cde59c2ded0a0a45db4da3c09f7937309ebf169.ico`,
-//       },
-//     },
+     {
+       type: "meta",
+       attributes: {
+         name: "robots",
+         content: "noindex, nofollow",
+       },
+     },
+     {
+      type: "link",
+      attributes: {
+        rel: "shortcut icon",
+        href: `https://eu.evocdn.io/dealer/1411/content/media/My_Theme/favicon-32x32.png`,
+      },
+    },
 
-//      {
-//        type: "link",
-//        attributes: {
-//          rel: "canonical",
-//          href: `${
-//            document._site.c_canonical?document.c_canonical:stagingBaseurl
+     {
+       type: "link",
+       attributes: {
+         rel: "canonical",
+         href: `${
+           document._site.c_canonical?document.c_canonical:stagingBaseurl
             
-//          }`,
-//        },
-//      },
+         }`,
+       },
+     },
  
-//      {
-//        type: "meta",
-//        attributes: {
-//          property: "og:description",
-//          content: `${document.c_meta_description?document.c_meta_description:StaticData.Meta_description}`,
-//        },
-//      },
-//      {
-//        type: "meta",
-//        attributes: {
-//          property: "og:title",
-//          content: `${document.c_meta_title?document.c_meta_title:StaticData.Meta_title}`,
-//        },
-//      },
-//      {
-//        type: "meta",
-//        attributes: {
-//          property: "og:image",
-//          content: `https://a.mktgcdn.com/p-sandbox/VgddlDjYzDF07X3Tw-BttjNIoMwYUaCyslD_8Khf61E/2000x1333.jpg`,
-//        },
-//      },
-//      {
-//       type: "meta",
-//       attributes: {
-//         name: "twitter:card",
-//         content: "summary",
-//       },
-//     },
-//     {
-//       type: "meta",
-//       attributes: {
-//         name: "twitter:description",
-//         content:`${document.c_meta_description?document.c_meta_description:StaticData.Meta_description}`,
-//       },
-//     },
-//     {
-//       type: "meta",
-//       attributes: {
-//         name: "twitter:image",
-//         content: "https://a.mktgcdn.com/p-sandbox/VgddlDjYzDF07X3Tw-BttjNIoMwYUaCyslD_8Khf61E/2000x1333.jpg",
-//       },
-//     },
-//      /// twitter tag
+     {
+       type: "meta",
+       attributes: {
+         property: "og:description",
+         content: `${document.c_meta_description?document.c_meta_description:StaticData.Meta_description}`,
+       },
+     },
+     {
+       type: "meta",
+       attributes: {
+         property: "og:title",
+         content: `${document.c_meta_title?document.c_meta_title:StaticData.Meta_title}`,
+       },
+     },
+     {
+       type: "meta",
+       attributes: {
+         property: "og:image",
+         content: `https://eu.evocdn.io/dealer/1411/content/media/My_Theme/favicon-32x32.png`,
+       },
+     },
+     {
+      type: "meta",
+      attributes: {
+        name: "twitter:card",
+        content: "summary",
+      },
+    },
+    {
+      type: "meta",
+      attributes: {
+        name: "twitter:description",
+        content:`${document.c_meta_description?document.c_meta_description:StaticData.Meta_description}`,
+      },
+    },
+    {
+      type: "meta",
+      attributes: {
+        name: "twitter:image",
+        content: "https://eu.evocdn.io/dealer/1411/content/media/My_Theme/favicon-32x32.png",
+      },
+    },
+     /// twitter tag
 
     
 
    
 
    
-//    ],
+   ],
    
-//  };
-// };
+ };
+};
 
 const Locator: Template<TemplateRenderProps>= ({
    document,
