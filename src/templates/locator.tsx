@@ -89,7 +89,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
        type: "meta",
        attributes: {
          name: "author",
-         content: "Matalan",
+         content: "Ryman",
        },
      },
 
