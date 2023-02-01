@@ -196,13 +196,34 @@ const Locator: Template<TemplateRenderProps>= ({
   var Api="AIzaSyDZNQlSlEIkFAct5VzUtsP4dSbvOr2bE18";  
   return (
     <>
-    <JsonLd<locator>
+   <JsonLd<Organization>
         item={{
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Ryman",
-          url: stagingBaseurl,
-          logo: "https://eu.evocdn.io/dealer/1411/content/media/My_Theme/favicon-32x32.png",
+          url: "https://www.rymanbusiness.com/",
+          logo: "https://eu.evocdn.io/dealer/1411/content/media/My_Theme/ry-foot-logo.png",
+          address: {
+            "@type": "PostalAddress",
+            // streetAddress: address.line1,
+            // addressLocality: address.city,
+            // addressRegion: address.region,
+            // postalCode: address.postalCode,
+            addressCountry: "United Kingdom",
+          },
+          contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "contact",
+            telephone: "0333 103 0933",
+            email: "https://www.rymanbusiness.com/contact-us"
+          },
+          sameAs: [
+            "https://www.facebook.com/rymanbusiness/",
+            "https://twitter.com/RymanBusiness",
+            "https://www.linkedin.com/company/rymanbusiness",
+            "https://www.instagram.com/rymanbusiness/"
+           
+          ],
         }}
       />
        <JsonLd<BreadcrumbList>
