@@ -80,7 +80,7 @@ const SearchLayout = (props: any): JSX.Element => {
     setTimeout(() => {
       setIsloading(false);
       $('body').removeClass("overflow-hidden")
-    }, 5200);
+    }, 3200);
 
   }
   const onClick = () => {
