@@ -16,6 +16,7 @@ import Banner from "../components/locationDetail/banner";
 import PageLayout from "../components/layouts/PageLayout";
 import { favicon, stagingBaseurl } from "../../sites-global/global";
 import { StaticData } from "../../sites-global/staticData";
+import { JsonLd } from "react-schemaorg";
 
 
 
@@ -266,8 +267,9 @@ const region: Template<TemplateRenderProps> = ({
       })
 
     }
-
+ 
     return (
+      
       <li className="storelocation-category">
           <a
             key={entity.slug}
@@ -281,8 +283,71 @@ const region: Template<TemplateRenderProps> = ({
   });
 
   let bannerimage = c_banner_image && c_banner_image.image.url;
+  let breadcrumbScheme: any = [];
+  let currentIndex: any = 0;
+  dm_directoryParents &&
+    dm_directoryParents.map((i: any, index: any) => {
+      currentIndex = index;
+      if (index != 0) {
+        breadcrumbScheme.push({
+          "@type": "ListItem",
+          position: index,
+          item: {
+            "@id": `${stagingBaseurl}/${i.slug}`,
+            name: i.name,
+          },
+        });
+      }
+    });
+  breadcrumbScheme.push({
+    "@type": "ListItem",
+    position: currentIndex + 1,
+    item: {
+      "@id": `${stagingBaseurl}/${document.slug.toString()}.html`,
+      name: document.name,
+    },
+  });
   return (
     <>
+    <JsonLd<Organization>
+        item={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Ryman",
+          url: "https://www.rymanbusiness.com/",
+          logo: "https://eu.evocdn.io/dealer/1411/content/media/My_Theme/ry-foot-logo.png",
+          address: {
+            "@type": "PostalAddress",
+            // streetAddress: address.line1,
+            // addressLocality: address.city,
+            // addressRegion: address.region,
+            // postalCode: address.postalCode,
+            addressCountry: "United Kingdom",
+          },
+          contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "contact",
+            telephone: "0333 103 0933",
+            email: "https://www.rymanbusiness.com/contact-us"
+          },
+          sameAs: [
+            "https://www.facebook.com/rymanbusiness/",
+            "https://twitter.com/RymanBusiness",
+            "https://www.linkedin.com/company/rymanbusiness",
+            "https://www.instagram.com/rymanbusiness/"
+           
+          ],
+        }}
+      />
+
+      <JsonLd<BreadcrumbList>
+        item={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+
+          itemListElement: breadcrumbScheme,
+        }}
+      />
       <PageLayout global={_site}>
       <BreadCrumbs
           name={name}
