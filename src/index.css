@@ -398,8 +398,8 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
 .nearby-card .button-bx{@apply flex-col md:flex-row }
 .nearby-card .button-bx .btn{@apply w-full md:w-[48%] }
 .nearby-card .button-bx .btn + .btn{@apply mt-2 md:mt-0}
-
-.nearby-card .button-bx .btn:hover svg{@apply !fill-red }
+/* 
+.nearby-card .button-bx .btn:hover svg{@apply !fill-red } */
 
 .map-section .button-bx .btn{
   @apply text-sm
